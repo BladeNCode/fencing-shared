@@ -1,0 +1,14 @@
+{
+  "name": "fencing-shared",
+  "private": true,
+  "type": "module",
+  "description": "Shared fencing-domain modules for the BladeNCode fencing apps. Not published \u2014 submoduled into each app.",
+  "scripts": {
+    "test": "eslint . && vitest run",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^9",
+    "vitest": "^4.1.0"
+  }
+}

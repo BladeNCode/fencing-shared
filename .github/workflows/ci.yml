@@ -1,0 +1,48 @@
+name: CI
+
+# This repo gates the layers that depend on nothing: vocabulary/, schema/,
+# strings/ and boundaries.test.js. `capture/` is deliberately excluded here —
+# those components need AppElement and a DOM, so they run in each consuming
+# app via its app/shared/**/*.test.js glob, against that app's Socle version.
+#
+# No Socle dependency, not even a dev one: a file: path to an app's _lib/
+# would pin shared code to one app's library copy and destroy the drift signal
+# the whole arrangement exists to produce.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Layer 1-2 tests
+        run: npx vitest run
+
+  # Post-merge canary, not a merge gate. Shared code is identical bytes in
+  # every consumer, so a failure in one app and not another is a fact about
+  # that app — most often a different Socle version. Gating on it would make
+  # shared velocity hostage to the slowest app.
+  #
+  # Enable once point-capture is on GitHub; needs a token with actions:write on
+  # the consumer repo.
+  #
+  # consumers:
+  #   needs: gate
+  #   if: github.ref == 'refs/heads/main'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Trigger point-capture CI
+  #       run: gh workflow run ci.yml --repo ${{ github.repository_owner }}/point-capture
+  #       env:
+  #         GH_TOKEN: ${{ secrets.CONSUMER_REPO_TOKEN }}
