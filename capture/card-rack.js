@@ -1,7 +1,8 @@
 import { AppElement } from 'socle/core/app-element.js';
 import { t } from 'socle/core/strings.js';
 
-// Shared across the trifecta. One fencer's penalty rack: a button that both
+// Shared across the bladencode fencing apps. One fencer's penalty rack: a
+// button that both
 // *shows* the cards they've been given and opens the picker to give another.
 //
 // Deliberately a sibling of touch-target rather than a child of it, even

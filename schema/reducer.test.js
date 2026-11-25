@@ -6,7 +6,8 @@ import { sharedReducer } from './reducer.js';
 
 // WHY THIS FILE EXISTS
 //
-// The three trifecta apps ship independently and exchange slices of each
+// The three bladencode fencing apps ship independently and exchange slices of
+// each
 // other's event logs. That only works because of three properties, and this
 // one is the fragile one:
 //

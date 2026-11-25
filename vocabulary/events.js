@@ -1,4 +1,5 @@
-// The event vocabulary shared by the trifecta. ZERO imports, deliberately —
+// The event vocabulary shared by the bladencode fencing apps. ZERO imports,
+// deliberately —
 // not even Socle. This is the contract three independently-deployed apps agree
 // on, so it must be loadable by anything: a reducer, a build script, a test, a
 // future import/export validator.

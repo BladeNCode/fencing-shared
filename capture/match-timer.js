@@ -14,7 +14,8 @@ function format(seconds) {
   return `${m}:${r}`;
 }
 
-// Shared across the trifecta (doc 09/10): the *match* clock — counts down
+// Shared across the bladencode fencing apps (doc 09/10): the *match* clock —
+// counts down
 // against the bout's period length and tracks the period number.
 // Deliberately separate from a capture source's own video-offset timer
 // (which counts up and is specific to video capture). Ticks are UI-local,

@@ -3,7 +3,8 @@ import { t } from 'socle/core/strings.js';
 import { Gestures } from 'socle/modules/gestures/gestures.js';
 import { buzz, BUZZ_SCORE } from './haptics.js';
 
-// Shared across the trifecta (doc 09 §5: Pret Compet's device model needs the
+// Shared across the bladencode fencing apps (doc 09 §5: Pret Compet's device
+// model needs the
 // same capture UI). Reaches the library through the depth-independent 'socle/'
 // specifier, so this file does not know or care where it is mounted — see this
 // repo's README. It used to be symlinked inside _lib/ with relative '../../'

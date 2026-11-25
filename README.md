@@ -1,9 +1,9 @@
 # fencing-shared
 
-Shared module set for the bladencode-trifecta fencing apps (Point Capture,
+Shared module set for the bladencode fencing apps (Point Capture,
 Pret Compet, Allez Train). Vendored like Socle's own `core/`/`modules/` —
 symlinked into each app, not an npm package. See
-`bladencode_trifecta/planning/08-build-strategy.md` for the rationale and
+`planning/08-build-strategy.md` in the workspace for the rationale and
 `09-point-capture-detailed-design.md` §5 for what is shared-shaped vs app-local.
 
 ## The boundary that actually matters

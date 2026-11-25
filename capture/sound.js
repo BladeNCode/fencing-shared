@@ -1,4 +1,5 @@
-// Shared across the trifecta. Short synthesised tones for the match clock.
+// Shared across the bladencode fencing apps. Short synthesised tones for the
+// match clock.
 //
 // Synthesised rather than bundled audio files: two short beeps as assets
 // would be bytes to cache and paths to resolve per app, and a referee's

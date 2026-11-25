@@ -1,7 +1,8 @@
 import { AppElement } from 'socle/core/app-element.js';
 import { t } from 'socle/core/strings.js';
 
-// Shared across the trifecta. Full-screen card picker: one page per card,
+// Shared across the bladencode fencing apps. Full-screen card picker: one
+// page per card,
 // swiped horizontally, the whole screen flooded in that card's colour so
 // the referee can hold the phone up and show it from across the piste.
 //

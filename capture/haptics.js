@@ -1,4 +1,5 @@
-// Shared across the trifecta. The capture screen is operated by feel —
+// Shared across the bladencode fencing apps. The capture screen is operated
+// by feel —
 // often with the phone held low while the referee watches the piste — so
 // the pulse lengths carry meaning and have to agree everywhere. They were
 // previously redeclared in three files, which is exactly how two of them
